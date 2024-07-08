@@ -3,5 +3,5 @@ package com.cod.market.product.controller;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class MemberController {
+public class ProductController {
 }

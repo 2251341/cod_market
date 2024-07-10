@@ -13,15 +13,15 @@
             </li>
             <li class="list-group-item">
                 <span>번호 :</span>
-                <span class="badge bg-primary">123</span>
+                <span th:text="${product.id}" class="badge bg-primary"></span>
             </li>
             <li class="list-group-item">
                 <span>등록날짜 :</span>
-                <span>2024-07-08</span>
+                <span th:text="${product.createDate}"></span>
             </li>
             <li class="list-group-item">
                 <span>수정날짜 :</span>
-                <span>2024-07-08</span>
+                <span th:text="${product.modifyDate}"></span>
             </li>
             <li class="list-group-item">
                 <span>상품명 :</span>

@@ -52,7 +52,7 @@
                             <textarea th:text="${question.content}" name="content" id="content" class="form-control"></textarea>
                         </div>
                         <input type="submit" value="질문 수정" class="btn btn-primary">
-                        <a th:href="@{|/product/detail/${question.product.id}|}">취소</a>
+                        <a class="btn btn-primary" th:href="@{|/product/detail/${question.product.id}|}">취소</a>
                     </div>
                 </form>
                 <script>

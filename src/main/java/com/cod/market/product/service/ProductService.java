@@ -13,6 +13,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ProductService {
     private final ProductRepository productRepository;
+
     public List<Product> getList() {
         return productRepository.findAll();
     }
@@ -26,8 +27,14 @@ public class ProductService {
     }
 
     public Product getProduct(Long id) {
-        Optional<Product> product =productRepository.findById(id);
-        // TODO: 없을 경우 예외처리 예정
-        return product.get();
+        Optional<Product> product = productRepository.findById(id);
+
+        if (product.isPresent()) {
+            return product.get();
+        } else {
+            throw new RuntimeException("question not found");
+        }
     }
+
+
 }

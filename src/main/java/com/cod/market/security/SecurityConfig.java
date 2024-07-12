@@ -31,9 +31,9 @@ public class SecurityConfig {
                         .defaultSuccessUrl("/"))
                 .oauth2Login(
                         oauth2Login -> oauth2Login
-                                .loginPage("member/login")
+                                .loginPage("/member/login")
                                 .userInfoEndpoint(
-                                        userinfoEndpoint -> userinfoEndpoint
+                                        userInfoEndpoint -> userInfoEndpoint
                                                 .userService(oAuth2UserService)
                                 )
                 )

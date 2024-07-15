@@ -4,6 +4,7 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,6 +23,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @SuperBuilder(toBuilder = true)
 @EntityListeners(AuditingEntityListener.class)
 @NoArgsConstructor
+@AllArgsConstructor
 public class BaseEntity {
     @Id
     @GeneratedValue(strategy = IDENTITY)

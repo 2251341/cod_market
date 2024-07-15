@@ -1,32 +1,36 @@
-package com.cod.market.member.entity;
+    package com.cod.market.member.entity;
 
-import com.cod.market.cart.entity.Cart;
-import com.cod.market.market.base.BaseEntity;
-import com.cod.market.question.entity.Question;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.experimental.SuperBuilder;
+    import com.cod.market.cart.entity.Cart;
+    import com.cod.market.market.base.BaseEntity;
+    import com.cod.market.question.entity.Question;
+    import jakarta.persistence.CascadeType;
+    import jakarta.persistence.Entity;
+    import jakarta.persistence.OneToMany;
+    import lombok.AllArgsConstructor;
+    import lombok.Getter;
+    import lombok.NoArgsConstructor;
+    import lombok.Setter;
+    import lombok.experimental.SuperBuilder;
 
-import java.util.List;
+    import java.util.List;
 
-@Entity
-@Getter
-@Setter
-@SuperBuilder
-public class Member extends BaseEntity {
-    private String username;
-    private String password;
-    private String nickname;
-    private String email;
-    private String isActive;
+    @Entity
+    @Getter
+    @Setter
+    @SuperBuilder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public class Member extends BaseEntity {
+        private String username;
+        private String password;
+        private String nickname;
+        private String email;
+        private String isActive;
 
-    // 회원 삭제 시 질문 삭제
-    @OneToMany(mappedBy = "member",cascade = CascadeType.REMOVE)
-    private List<Question> questionList;
+        // 회원 삭제 시 질문 삭제
+        @OneToMany(mappedBy = "member",cascade = CascadeType.REMOVE)
+        private List<Question> questionList;
 
-    @OneToMany(mappedBy = "member",cascade = CascadeType.REMOVE)
-    private List<Cart> cartList;
-}
+        @OneToMany(mappedBy = "member",cascade = CascadeType.REMOVE)
+        private List<Cart> cartList;
+    }

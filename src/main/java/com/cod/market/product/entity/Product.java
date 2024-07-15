@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
@@ -20,6 +21,7 @@ import java.util.List;
 @Entity
 @ToString
 @SuperBuilder
+@NoArgsConstructor
 public class Product extends BaseEntity {
 
     private String name;

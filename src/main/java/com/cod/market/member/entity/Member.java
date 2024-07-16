@@ -2,6 +2,7 @@
 
     import com.cod.market.cart.entity.Cart;
     import com.cod.market.market.base.BaseEntity;
+    import com.cod.market.product.entity.Product;
     import com.cod.market.question.entity.Question;
     import jakarta.persistence.CascadeType;
     import jakarta.persistence.Entity;
@@ -26,6 +27,9 @@
         private String nickname;
         private String email;
         private String isActive;
+
+        @OneToMany(mappedBy = "member",cascade = CascadeType.REMOVE)
+        private List<Product> ProductList;
 
         // 회원 삭제 시 질문 삭제
         @OneToMany(mappedBy = "member",cascade = CascadeType.REMOVE)

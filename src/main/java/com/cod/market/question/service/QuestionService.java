@@ -43,8 +43,8 @@ public class QuestionService {
         Question modifyQuestion = question.toBuilder()
                 .content(content)
                 .build();
-
-        questionRepository.save(question);
+    
+        questionRepository.save(modifyQuestion);
     }
 
     public void delete(Question question) {

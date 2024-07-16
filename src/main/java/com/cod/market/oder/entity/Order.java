@@ -1,27 +1,26 @@
-package com.cod.market.question.entity;
+package com.cod.market.oder.entity;
 
 import com.cod.market.market.base.entity.BaseEntity;
 import com.cod.market.member.entity.Member;
-import com.cod.market.product.entity.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
+import static jakarta.persistence.FetchType.LAZY;
+
 @Entity
-@Setter
-@Getter
-@SuperBuilder(toBuilder = true)
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Question extends BaseEntity {
-    private String content;
-
-    @ManyToOne
-    private Member member;
-    @ManyToOne
-    private Product product;
+@Getter
+public class Order extends BaseEntity {
+    @ManyToOne(fetch = LAZY)
+    private Member buyer;
+    private String name;
+    private boolean isPaid;
+    private boolean isCanceled;
+    private boolean isRefunded;
 }

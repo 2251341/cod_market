@@ -54,6 +54,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/member/join">회원가입</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart/list">장바구니</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" sec:authority="hasAuthority('ADMIN')" href="/adm">관리자 홈</a>
+                    </li>
 
                 </ul>
                 <div class="text-white mr-5 mb-3" sec:authorize="isAuthenticated()"

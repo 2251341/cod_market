@@ -1,9 +1,10 @@
 package com.cod.market.oder.entity;
 
-import com.cod.market.market.base.entity.BaseEntity;
+import com.cod.market.base.entity.BaseEntity;
 import com.cod.market.member.entity.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,6 +14,7 @@ import static jakarta.persistence.FetchType.LAZY;
 
 @Entity
 @SuperBuilder
+@Table(name = "`order`")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

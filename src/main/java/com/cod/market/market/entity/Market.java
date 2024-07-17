@@ -1,6 +1,6 @@
 package com.cod.market.market.entity;
 
-import com.cod.market.market.base.entity.BaseEntity;
+import com.cod.market.base.entity.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.experimental.SuperBuilder;
 

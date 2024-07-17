@@ -1,4 +1,4 @@
-package com.cod.market.market.base.initData;
+package com.cod.market.base.initData;
 
 import com.cod.market.member.service.MemberService;
 import com.cod.market.product.service.ProductService;

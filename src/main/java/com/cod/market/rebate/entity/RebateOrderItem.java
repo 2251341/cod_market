@@ -1,6 +1,6 @@
-package com.cod.market.reBate.entity;
+package com.cod.market.rebate.entity;
 
-import com.cod.market.market.base.entity.BaseEntity;
+import com.cod.market.base.entity.BaseEntity;
 import com.cod.market.oder.entity.Order;
 import com.cod.market.oder.entity.OrderItem;
 import com.cod.market.product.entity.Product;

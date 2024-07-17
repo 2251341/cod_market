@@ -1,6 +1,6 @@
 package com.cod.market.cash.entity;
 
-import com.cod.market.market.base.entity.BaseEntity;
+import com.cod.market.base.entity.BaseEntity;
 import com.cod.market.member.entity.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;

@@ -1,4 +1,4 @@
-package com.cod.market.market.base.initData;
+package com.cod.market.base.initData;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

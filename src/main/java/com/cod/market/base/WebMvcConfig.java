@@ -1,4 +1,4 @@
-package com.cod.market.market.base;
+package com.cod.market.base;
 
 
 import org.springframework.beans.factory.annotation.Value;
